@@ -6,6 +6,9 @@ export default function App() {
   function getData() {
     alert("hello from App");
   }
+  function members() {
+    alert("hello from members");
+  }
 
   return (
     <div className="App">
