@@ -5,6 +5,7 @@ export default function App() {
   const [name, setName] = useState("");
   const [tnc, setTnc] = useState(false);
   const [interest, setInterest] = useState("");
+
   function getFormData(e) {
     console.warn(name, tnc, interest);
     e.preventDefault();
