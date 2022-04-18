@@ -1,16 +1,31 @@
 import "./styles.css";
 import React from "react";
-import Users from "./Users";
 
-export default function App() {
-  const [name, setName] = React.useState("Name");
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { name: "Name" };
+  }
+  componentDidMount() {
+    console.warn("componentDidMount");
+  }
 
-  return (
-    <div className="App">
-      <h1>Render Method in React</h1>
+  render() {
+    console.warn("render");
 
-      <Users />
-      {/* <button onClick={()=>setName("Prashant singh")}>Update Name</button> */}
-    </div>
-  );
+    return (
+      <div className="App">
+        <h1>Component Did Mount</h1>
+        <h1>Name: {this.state.name}</h1>
+
+        <button
+          onClick={() => {
+            this.setState({ name: "prashant singh" });
+          }}
+        >
+          Update Name
+        </button>
+      </div>
+    );
+  }
 }
