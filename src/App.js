@@ -1,21 +1,16 @@
 import "./styles.css";
-import User from "./User";
-import Members from "./Members";
+import React from "react";
+import Users from "./Users";
 
 export default function App() {
-  function getData() {
-    alert("hello from App");
-  }
-  function members() {
-    alert("hello from members");
-  }
+  const [name, setName] = React.useState("Name");
 
   return (
     <div className="App">
-      <User data={getData} />
-      <div style={{ float: "right" }}>
-        <Members data={members} />
-      </div>
+      <h1>Render Method in React</h1>
+
+      <Users />
+      {/* <button onClick={()=>setName("Prashant singh")}>Update Name</button> */}
     </div>
   );
 }
