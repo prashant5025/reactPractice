@@ -14,7 +14,7 @@ export default function App() {
     <div className="App">
       <User data={getData} />
       <div style={{ float: "right" }}>
-        <Members data={getData} />
+        <Members data={members} />
       </div>
     </div>
   );
