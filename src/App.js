@@ -1,10 +1,18 @@
 import "./styles.css";
-import Profile from "./Profile";
+import User from "./User";
+import Members from "./Members";
 
 export default function App() {
+  function getData() {
+    alert("hello from App");
+  }
+
   return (
     <div className="App">
-      <Profile />
+      <User data={getData} />
+      <div style={{ float: "right" }}>
+        <Members data={getData} />
+      </div>
     </div>
   );
 }
